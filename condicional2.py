@@ -1,23 +1,25 @@
 # Demonstração de operadores lógicos em condicionais:
-print("O que você irá fazer amanhã de manhã?")
-print("dormir / estudar / planejar")
-manha = input()
-print("O que você irá fazer amanhã à tarde?")
-print("jogar / treinar / trabalhar")
-tarde = input()
+manha = input("O que você irá fazer amanhã de manhã?")
+tarde = input("O que você irá fazer amanhã à tarde?")
 
-if manha == "dormir":
-    print("Você está desperdiçando o seu dia!")
-if tarde == "jogar":
-    print("Você está desperdiçando o seu dia!")
-
-if manha == "estudar":
-    print("Que bom! Você irá se aperfeiçoar!")
-if tarde == "treinar":
-    print("Que bom! Você irá se aperfeiçoar!")
-
-if manha == "planejar":
-    if tarde == "trabalhar":
-        print("Para trabalhar melhor, devo planejar!")
-
-print("Tenha um bom dia")
+if not manha or not tarde:
+    print("Você precisa dizer o que vai fazer!")
+else:
+    if manha == "jogar" and tarde == "dormir":
+        print("Você está desperdiçando o seu dia!")
+    elif manha == "dormir" and tarde == "jogar":
+        print("Você está desperdiçando o seu dia!")
+    elif manha == "estudar" and tarde == "treinar":
+        print("Parabéns, você está no caminho certo!")
+    elif manha == "treinar" and tarde == "estudar":
+        print("Parabéns, você está no caminho certo!")
+    elif manha == "jogar" and tarde == "estudar":
+        print("Tudo bem, poderia ser melhor, mas já é um começo!")
+    elif manha == "estudar" and tarde == "jogar":
+        print("Tudo bem, poderia ser melhor, mas já é um começo!")
+    elif manha == "dormir" and tarde == "treinar":
+        print("Tudo bem, poderia ser melhor, mas já é um começo!")
+    elif manha == "treinar" and tarde == "dormir":
+        print("Tudo bem, poderia ser melhor, mas já é um começo!")
+    else:
+        print("Você não me respondeu...")
