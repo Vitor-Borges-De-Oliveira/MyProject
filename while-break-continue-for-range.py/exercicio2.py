@@ -1,12 +1,11 @@
 # Exercício 2, dia 09/03/2026
 p = ""
 
-while p != "Leon":
-    print("Informe o melhor Personagem da CAPCOM: ")
-    p = input()
-
-    if p == "Leon":
-        print("Acertou!")
+while True:
+    p = input("Informe o melhor personagem da CAPCOM: ")
+    if p != "Leon":
+        print("Errrrouuuu!")
+        print("Tenta de novo!")
     else:
-        print("Errou!")
-    continue
+        print("Acertouuuu!")
+        break
