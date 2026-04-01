@@ -11,7 +11,7 @@ especial = inss.pop()
 
 print("Agora vou colocá-la na frente de todos!")
 inss.insert(0, especial)
-print(f"Conferindo a a lista: {inss}")
+print(f"Conferindo a lista: {inss}")
 
 print("Maria não gostou e reclamou...")
 inss.remove("Maria")
